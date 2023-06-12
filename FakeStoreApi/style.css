@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #393b3a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #ffffff;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0187a7;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --bg: #ececf0;
+    --card-bg: #FBFBFB;
+    --black: #1E2021;
+    --white: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.product-filter-btns {
+    padding: 3rem 0 2rem 0;
+    display: flex;
+    gap: 1.7rem;
+    flex-wrap: wrap;
+}
+
+.btn-filter {
+    display: inline-flex;
+    padding: 0.7rem 2rem;
+    border-radius: 2.7rem;
+    cursor: pointer;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    font-weight: 500;
+    transition: all 0.5s ease-in;
+}
+
+.btn-filter.mixitup-control-active {
+    transition: all 0.5s ease-in;
+    background: var(--black);
+    color: var(--white);
+}
+
+.product-filter-items {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+.mix {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.item-top {
+    padding: 2rem 0 0.5rem 0;
+}
+
+.item-top img {
+    width: 100%;
+}
+
+.item-bottom {
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.item-heading {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.item-subheading {
+    font-size: 2.5rem;
+    color: rgb(97, 97, 97);
+    padding: 1rem 0 2rem 0;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.btn-cart {
+    display: inline-flex;
+    background: var(--black);
+    color: var(--white);
+    width: 4rem;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.btn-cart ion-icon {
+    font-size: 2.5rem;
+    --ionicon-stroke-width: 32px;
+}
+
+.btn-cart:hover ion-icon {
+    animation: down 0.5s linear;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(2rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
